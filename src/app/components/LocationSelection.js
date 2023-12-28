@@ -28,14 +28,25 @@ export default function LocationSelection() {
             <div className="flex flex-col justify-center ">
               <div className="flex flex-col xl:flex-row items-center xl:gap-x-2 gap-y-2 xl:gap-y-0">
                 <FaMapMarkerAlt className="text-accent" />
-                <div className="text-[15px] uppercase font-bold">Select Location</div> 
+                <div className="text-[15px] uppercase font-bold">
+                  Select Location
+                </div>
               </div>
-              <div className="uppercase font-medium text-[13px] text-secondary text-center xl:ml-6 xl:text-left">{location}</div>
+              <div className="uppercase font-medium text-[13px] text-secondary text-center xl:ml-6 xl:text-left">
+                {location}
+              </div>
             </div>
           </div>
         </Menu.Button>
         {/* items */}
-        <Menu.Items>Menu items</Menu.Items>
+        <Menu.Items className="drodown-menu shadow-lg absolute -top-56 xl:top-[90px] left-1/2 xl:left-0 z-10 transform -translate-x-1/2 xl:-translate-x-0 text-sm text-center xl:text-left w-full bg-white max-w-[332px] py-6 rounded-[10px]">
+          {locations.map((location,index) => (
+            <div
+            onClick={() => setLocation(location)} 
+            key={index} 
+            className="cursor-pointer py-4 xl:pl-10 hover:bg-gray-50 text-[13px] uppercase">{location}</div>
+          ))}
+        </Menu.Items>
       </div>
     </Menu>
   );
