@@ -1,6 +1,8 @@
 
 export default function Copyright() {
   return (
-    <div>Copyright</div>
+    <div className="text-center py-10 border-t text-sm">
+      Copyright © CarLand Project 2024
+    </div>
   )
 }

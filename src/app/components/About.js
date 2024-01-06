@@ -18,7 +18,7 @@ export default function About() {
     })
     return (
         <section 
-        className="section flex items-center" 
+        className="section flex items-center bg-[#f3f4f6]" 
         id="about"
         ref={ref}>
             <div className="container mx-auto">
@@ -41,13 +41,13 @@ export default function About() {
                     <div className="flex-1 flex xl:justify-center items-center">
                         <div className="xl:max-w-[517px]">
                             <motion.h2
-                            variants={fadeIn("up", 0.3)}
+                            variants={fadeIn("left", 0.3)}
                             initial="hidden"
                             whileInView={"show"}
                             viewport={{ once: false, amount: 0.6 }} 
                             className="h2 mt-5 xl:mt-0">Car services simplified.</motion.h2>
                             <motion.p 
-                            variants={fadeIn("up", 0.5)}
+                            variants={fadeIn("left", 0.5)}
                             initial="hidden"
                             whileInView={"show"}
                             viewport={{ once: false, amount: 0.6 }}
@@ -56,7 +56,7 @@ export default function About() {
                             </motion.p>
                             {/* stats */}
                             <motion.div
-                            variants={fadeIn("up", 0.7)}
+                            variants={fadeIn("left", 0.7)}
                             initial="hidden"
                             whileInView={"show"}
                             viewport={{ once: false, amount: 0.6 }} 
